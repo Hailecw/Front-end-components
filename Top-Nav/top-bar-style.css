@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto' sans-serif;
+}
+.topbar{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 80px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2C3E50;
+    color: #fff;
+}
+.logo-cont{
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+
+}
+
+.notigication-icon,
+.logo-cont .logo-icon{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+.tab-item .expand-icon{
+    font-size: 30px;
+    color: #E0BFB8; 
+}
+.notigication-icon:hover{
+    cursor: pointer;
+}
+.logo-cont .name{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.tabs{
+    display: inline-flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.tab-item{
+    display: inline-flex;
+    gap: 5px;
+    align-items: center;
+    position: relative;
+}
+.tab-item:hover{
+    cursor: pointer;
+}
+.profile-circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.profile-circle:hover{
+    cursor: pointer;
+}
+.icons{
+    display: inline-flex;
+    gap: 20px;
+}
+.tab-name{
+    font-size: 18px;
+    color: #fff;
+}
+.tab-item .expand-icon{
+    transition: all 0.5s ease;
+    color: #fff;
+}
+.tab-item:hover .expand-icon{
+    transform: rotate(180deg);
+}
+.sub-menu{
+    position: absolute;
+    top: 80%;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    display: inline-flex;
+    flex-direction: column;
+    background-color: #EDF2F7;
+    padding: 10px;
+    transition: all 0.5s ease;
+    color: #2C3E50;
+}
+.sub-menu-item{
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 0 10px;
+}
+
+.sub-menu-item:hover{
+    cursor: pointer;
+    background-color: #E2E8F0;
+}
+
+.sub-menu-item .item-icon{
+    font-size: 20px;
+}
+.tab-item:hover .sub-menu{
+    opacity: 1;
+    visibility: visible;
+}

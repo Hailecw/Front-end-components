@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bottom Navigation Bar</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="bottom-nav2-style.css">
+</head>
+<body>
+    <div class="bottombar">
+        <a class="active nav-item" onclick="ChangeTab(event, this)">
+            <span class="item-icon material-icons">home</span>
+        </a>
+        <a class="nav-item" onclick="ChangeTab(event, this)">
+            <span class="item-icon material-icons">search</span>
+        </a>
+        <a class="nav-item" onclick="ChangeTab(event, this)">
+            <span class="item-icon material-icons">favorite</span>
+        </a>
+        <a class="nav-item" onclick="ChangeTab(event, this)">
+            <span class="item-icon material-icons">notifications</span>
+        </a>
+        <a class="nav-item" onclick="ChangeTab(event, this)">
+            <span class="item-icon material-icons">account_circle</span>
+        </a>
+        <div class="active-btn"></div>
+    </div>
+    <script>
+        function ChangeTab(event,clickedTab) {
+            // Remove active class from all tabs
+            var tabs = document.querySelectorAll(".nav-item");
+            tabs.forEach(tab => tab.classList.remove("active"));
+            
+            // Add active class to clicked tab
+            clickedTab.classList.add("active"); 
+        }
+    </script>
+</body>
+</html>

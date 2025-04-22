@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Robot' sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.cont{
+    background-color: #F5F5F5;
+    width: 650px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+
+.two-icon-chip{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 10px;
+    gap: 7px;
+    border-radius: 99px;
+    background-color: #EBEBEB;
+    color:black
+}
+
+.two-icon-chip .material-icons{
+    color: #6B6B6B;
+}
+
+.two-icon-chip:hover{
+    cursor: pointer;
+    background-color: #BCBCBC;
+    color: #181818;
+}
+.two-icon-chip .material-icons{
+    color: #AEAEAE;
+}
+
+.chip .chip-text{
+    color:#232323;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+.one-icon-chip{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 10px;
+    gap: 7px;
+    background-color: #BCBCBC;
+    color: #181818;
+    border-radius: 99px;
+}
+.one-icon-chip:hover{
+    cursor: pointer;
+    background-color: #EBEBEB;
+}
+.no-icon-chip{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    gap: 7px;
+    background-color: #FFF;
+    color: #757575;
+    border: 1px solid #BCBCBC;
+    border-radius: 99px;
+}
+.no-icon-chip .chip-text{
+    color: #4B4B4B;
+}
+.no-icon-chip:hover{
+    cursor: pointer;
+}
+.color-chip{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    gap: 7px;
+    background-color: #E3165B;
+    color: #FFF;
+    border-radius: 99px;
+}
+.color-chip:hover{
+    cursor: pointer;
+    background-color: #EBEBEB;
+    color: #181818;
+}
+
+.chip{
+    border: none;
+    outline: none;
+}
+
+
+

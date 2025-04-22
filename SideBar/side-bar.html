@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side Bar Example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="sidebar-style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-head">
+            <div class="logo-cont">
+                <i class="clogo fa-solid fa-code"></i>
+                <p class="cname">ethio.py</p>
+            </div>
+            <i class="toggle-icon fa-solid fa-angles-right"></i>
+        </div>
+        <div class="search-cont">
+            <input type="text" class="search-field" placeholder="Search...">
+            <i class="search-icon fa-solid fa-magnifying-glass"></i>
+        </div>
+        <ul class="item-list">
+            <p class="list-title">Main Menu</p>
+            <li class="list-item">
+                <a class="menu-item" href="#">
+                    <i class="item-icon fa-solid fa-table-columns"></i>
+                    <p class="item-name">Dashboard</p>
+                </a>
+            </li>
+            <li class="list-item">
+                <a class="menu-item" href="#">
+                    <i class="item-icon fa-regular fa-user"></i>
+                    <p>User</p>
+                </a>
+            </li>
+            <li class="list-item">
+                <a class="menu-item" href="#">
+                    <i class="item-icon fa-regular fa-comment"></i>
+                    <p>Messages</p>
+                </a>
+            </li>
+            <li class="list-item">
+                <a class="menu-item" href="#">
+                    <i class="item-icon fa-regular fa-folder"></i>
+                    <p>File Manager</p>
+                </a>
+            </li>
+            <li class="list-item">
+                <a class="menu-item" href="#">
+                    <i class="item-icon fa-solid fa-gear"></i>
+                    <p>Settings</p>
+                </a>
+            </li>
+            <li class="logout list-item">
+                <a class="menu-item" href="#">
+                    <i class="item-icon fa-solid fa-arrow-right-from-bracket"></i>
+                    <p>Logout</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <script>
+        const toggle_btn = document.querySelector(".toggle-icon");
+        const sidebar = document.querySelector(".sidebar");
+        toggle_btn.onclick = () =>{
+            sidebar.classList.toggle("active")
+        }
+    </script>
+        <div class="home">
+            <h1>Wel Come </h1>
+        </div>
+</body>
+</html>

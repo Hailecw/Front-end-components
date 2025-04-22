@@ -1,0 +1,99 @@
+.dialog-btns{
+    display: flex;
+    gap: 40px;
+    margin-top: 100px;
+}
+
+
+.dialog-window{
+    border: none;
+    border-radius: 10px;
+    height: 200px;
+    width: 420px;
+    padding: 14px 22px;
+}
+.dialog-window::backdrop{
+    background-color: rgba(0,0,0,0.5);
+}
+.title-and-close{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title-and-close .dialog-title{
+    font-size: 25px;
+    color:#4A4849
+}
+.close-btn{
+    font-size: 35px;
+}
+.close-btn:hover{
+    cursor: pointer;
+}
+.dialog-text{
+    font-size: 17px;
+    color: #696969;
+    line-height: 25px;
+}
+
+
+.primary {
+    border: none;
+    padding:12px 30px ;
+    font-size: 16px;
+    border-radius: 7px;
+    background-color: #426bff;
+    color:#FFF;
+    font-weight: 600;
+    transition: all 0.3s ease;  /* Smooth hover/focus effects */
+}
+.primary:hover{
+    background-color:#3155E0;
+    cursor: pointer;
+}
+.primary:focus,
+.primary:active
+{
+    background-color:#3155E0;
+    transform: translateY(1px);
+}
+.secondary{
+    background: transparent;
+    border-radius: 7px;
+    border: 1px solid #4261FF;
+    font-weight: 600;
+    transition: all 0.3s ease;  /* Smooth hover/focus effects */
+    padding: 12px 30px;
+    outline: none;
+    font-size: 16px;
+    color: #506FFF;
+    font-family: 'Inter', 'Segoe UI', sans-serif; /* Modern font stack */
+}
+.secondary:hover{
+    cursor: pointer;
+    border-color:#496dff ;
+    background-color:#e3e5f0 ;
+}
+
+
+.btns{
+    display:flex;
+    gap: 10px;
+    justify-content: end;
+}
+.email-field{
+    width: 90%;
+    padding: 12px;
+    outline: none;
+    border: 2px solid #C0C0C0;
+    border-radius: 7px;
+    font-size: 16px;
+}
+.subscribe{
+    width: 100%;
+    margin-top: 20px;
+}
+.form-dialog{
+    width: 450px;
+    height: 250px;
+}

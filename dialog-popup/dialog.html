@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Dialog Popup</title>
+    <link rel="stylesheet" href="dialog-style.css">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Roboto', sans-serif;
+        }
+
+    </style>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dialog-btns">
+        <button class="medium_btn primary" onclick="showDialog(0)">Share</button>
+        <button class="medium_btn primary" onclick="showDialog(1)">Subscribe</button>
+    </div>
+    <dialog class="dialog-window">
+        <div class="title-and-close">
+            <b class="dialog-title">Confirmation</b>
+            <span class="close-btn material-icons" onclick="closeDialog(0)">
+                close
+            </span>
+        </div>
+        <p class="dialog-text">
+            Are you sure you want to share this post on your social media? Sharing this content will let your friends and followers know about it.
+        </p>
+        <div class="btns">
+            <button class="secondary" onclick="closeDialog(0)">cancel</button>
+            <button class="primary" onclick="closeDialog(0)">share</button>
+        </div>
+    </dialog>
+    <dialog class="form-dialog dialog-window">
+        <div class="title-and-close">
+            <b class="dialog-title">Subscribe</b>
+            <span class="close-btn material-icons" onclick="closeDialog(1)">
+                close
+            </span>
+        </div>
+        <p class="dialog-text">
+            Join us for the latest updates! subscribe to our newsletter and stay updated with the insightful articles latest trend and exclusive offers.
+        </p>
+        <input type="email" class="email-field" placeholder="Email adderss">
+        <button class="subscribe primary" onclick="closeDialog(1)">SUBSCRIBE</button>
+    </dialog>
+    <script>
+        let dialog = document.getElementsByTagName("dialog");
+        function showDialog(index){
+            dialog[index].showModal()
+        }
+        function closeDialog(index){
+            dialog[index].close()
+        }
+    </script>
+</body>
+</html>

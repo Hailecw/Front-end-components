@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    margin: 0;
+    padding:50px;
+    display: flex;
+    gap:30px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #EAEDF0;
+}
+.post-card{
+    width: 400px;
+    height:550px ;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+
+}
+.account{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.name-and-date .date{
+    margin-top: -10px;
+    color: #828282;
+}
+.name-and-date .name{
+    font-weight: 600;
+}
+.account-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 9999px;
+    object-fit: cover;
+    
+}
+.post-desc{
+    text-align: left;
+    color: #828282;
+}
+.tags{
+    margin-top: -10px;
+    display: flex;
+}
+.tags span{
+    color: #4071F4;
+}
+.tags span:hover{
+    cursor: pointer;
+}
+.post-img{
+    object-fit: cover;
+    height: 250px;
+}
+.like-amount .like-btns div{
+    width:30px;
+    height: 30px;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+}
+.like-amount .like-btns div:hover{
+    cursor: pointer;
+}
+.thumbs-up{
+    background-color: #659AF2;
+}
+.heart{
+    background-color: #E9551E;
+    margin-left: -20%;
+}
+.like-btns{
+    display: inline-flex;
+}
+.like-amount{
+    display: inline-flex;
+    align-items: center;
+}
+.like-amount .like-no,
+.comment-no,
+.share-no
+{
+    color: #828282;
+}
+.comment-share{
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+}
+.comment-share p:hover{
+    cursor: pointer;
+}
+.reaction-amount{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.h-line{
+    color:#828282;
+    width: 80%;
+    border:none;
+    border-top: 1px solid #828282;
+}
+.react{
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+.reaction-btns{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.react p{
+    color: #828282;
+}
+.react:hover{
+    cursor: pointer;
+}
+.react i{
+    color:#4071F4 ;
+
+}

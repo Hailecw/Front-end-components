@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Robot' sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.cont{
+    background-color: #F5F5F5;
+    width: 600px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+
+.primary {
+    border: none;
+    padding:12px 30px ;
+    font-size: 16px;
+    border-radius: 7px;
+    background-color: #426bff;
+    color:#FFF;
+    font-weight: 600;
+    transition: all 0.3s ease;  /* Smooth hover/focus effects */
+}
+.primary:hover{
+    background-color:#3155E0;
+    cursor: pointer;
+}
+.primary:focus,
+.primary:active
+{
+    background-color:#3155E0;
+    transform: translateY(1px);
+}
+
+.send-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:0 18px;
+    gap: 7px;
+}
+.send-btn p{
+    font-size: 14px;
+}
+.send-btn span{
+    font-size: 20px;
+}
+.delete-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}
+.delete-btn p{
+    font-size: 14px;
+    margin: 0;
+}
+.delete-btn span{
+    font-size: 20px;
+}
+
+.error{
+    background: transparent;
+    border-radius: 7px;
+    font-weight: 600;
+    transition: all 0.3s ease;  /* Smooth hover/focus effects */
+    padding: 12px 30px;
+    outline: none;
+    font-size: 16px;
+    border: 1px solid #F44336;
+    color: #F44336;
+}
+.error:hover{
+    cursor: pointer;
+    border: 1px solid #C40505;
+    background-color: #e2dcdc;
+}
+.error:focus,
+.error:active{
+    border: 1px solid #ec0202;
+    background-color: #e4dada;
+}
+.small_btn{
+    padding:8px 8px;
+    font-size: 13px;
+}
+.half-round{
+    border-radius: 99px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:10px 10px;
+    padding-left: 25px;
+    gap: 10px;
+}
+
+.half-round .icon{
+    width: 32px;
+    height: 32px;
+    border-radius: 9999px;
+    background-color: #FFF;
+    margin: 0;
+    color:#426bff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    
+}
+.half-round-outlined{
+    background-color: #DFE4FF;
+    color:#4261FD;
+}
+.half-round-outlined .icon{
+    background-color:#4261FD;
+    color: #FFF;
+}
+.half-round-outlined:hover{
+    background-color: #c0c8f0;
+}
+.half-round-outlined:focus,
+.half-round-outlined:active{
+    background-color:#a1aef1;
+    transform: translateY(1px);
+}

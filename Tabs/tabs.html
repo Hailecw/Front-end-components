@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Tabs</title>
+    <link rel="stylesheet" href="tabs-style.css">
+</head>
+<body>
+    <div class="cont">
+        <div class="tabs">
+            <button class="tab-btn active">Item 1</button>
+            <button class="tab-btn">Item 2</button>
+            <button class="tab-btn">Item 3</button>
+            <button class="tab-btn">Item 4</button>
+            <div class="current"></div>
+        </div>
+        <div class="contents">
+            <div class="tab-content active">
+                <h2 class="title">Item 1</h2>
+                <p class="text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo mi dolor, at vestibulum est hendrerit at. Vestibulum in metus consectetur, egestas orci at, venenatis lacus. Vestibulum in metus consectetur, egestas orci at, venenatis lacus.
+                </p>
+            </div>
+            <div class="tab-content">
+                <h2 class="title">Item 2</h2>
+                <p class="text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo mi dolor, at vestibulum est hendrerit at. Vestibulum in metus consectetur, egestas orci at, venenatis lacus. Vestibulum in metus consectetur, egestas orci at, venenatis lacus.
+                </p>
+            </div>
+            <div class="tab-content">
+                <h2 class="title">Item 3</h2>
+                <p class="text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo mi dolor, at vestibulum est hendrerit at. Vestibulum in metus consectetur, egestas orci at, venenatis lacus. Vestibulum in metus consectetur, egestas orci at, venenatis lacus.
+                </p>
+            </div>
+            <div class="tab-content">
+                <h2 class="title">Item 4</h2>
+                <p class="text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo mi dolor, at vestibulum est hendrerit at. Vestibulum in metus consectetur, egestas orci at, venenatis lacus. Vestibulum in metus consectetur, egestas orci at, venenatis lacus.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const tabs = document.querySelectorAll('.tab-btn');
+        const all_content = document.querySelectorAll(".tab-content")
+        tabs.forEach((tab,index) => {
+            tab.addEventListener("click",(e)=>{
+                tabs.forEach(tab => {tab.classList.remove("active")});
+                tab.classList.add("active")
+                var current = document.querySelector('.current');
+                current.style.width = e.target.offsetWidth + "px";
+                current.style.left = e.target.offsetLeft + "px";
+                all_content.forEach(content => {content.classList.remove("active")});
+                all_content[index].classList.add("active")
+            })
+        });
+
+    </script>
+</body>
+</html>

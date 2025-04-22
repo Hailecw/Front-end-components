@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bottom Navigation Bar</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="bottom-nav-style.css">
+</head>
+<body>
+    <div class="bottombar">
+        <div class="nav-item" onclick="ChangeTab(event, this)">
+            <span class="item-icon material-icons">home</span>
+            <span class="item-name">Home</span>
+        </div>
+        <div class="nav-item" onclick="ChangeTab(event, this)">
+            <span class="item-icon material-icons">search</span>
+            <span class="item-name">Search</span>
+        </div>
+        <div class="nav-item" onclick="ChangeTab(event, this)">
+            <span class="item-icon material-icons">favorite</span>
+            <span class="item-name">Favorite</span>
+        </div>
+        <div class="active nav-item" onclick="ChangeTab(event, this)">
+            <span class="item-icon material-icons">notifications</span>
+            <span class="item-name">Notifications</span>
+        </div>
+        <div class="nav-item" onclick="ChangeTab(event, this)">
+            <span class="item-icon material-icons">account_circle</span>
+            <span class="item-name">Profile</span>
+        </div>
+    </div>
+    <script>
+        function ChangeTab(event, newTab) {
+            // Create ripple element
+            const ripple = document.createElement('span');
+            ripple.classList.add('ripple-effect');
+            
+            // Get click position relative to button
+            const rect = newTab.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+            const diameter = Math.max(rect.width, rect.height);
+            
+            // Position and size the ripple
+            ripple.style.left = `${x - diameter/2}px`;
+            ripple.style.top = `${y - diameter/2}px`;
+            ripple.style.width = `${diameter}px`;
+            ripple.style.height = `${diameter}px`;
+            
+            // Add ripple to button
+            newTab.appendChild(ripple);
+            
+            // Remove ripple after animation completes
+            ripple.addEventListener('animationend', () => {
+                ripple.remove();
+            });
+            
+            // Update active tab
+            var currentTab = document.querySelector(".active");
+            if (currentTab) {
+                currentTab.classList.remove("active");
+            }
+            newTab.classList.add("active");
+        }     
+    </script>
+</body>
+</html>

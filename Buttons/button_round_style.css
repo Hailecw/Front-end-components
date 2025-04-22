@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Robot' sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.cont{
+    background-color: #F5F5F5;
+    width: 400px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.primary {
+    border: none;
+    padding:12px 30px ;
+    font-size: 16px;
+    border-radius: 7px;
+    color:#FFF;
+    font-weight: 600;
+    transition: all 0.3s ease;  /* Smooth hover/focus effects */
+}
+.only-icon{
+    padding: 10px 14px;
+    background-color: #9835FF;
+}
+.only-icon:hover{
+    cursor: pointer;
+    background-color:#7c1fe0;
+}
+.only-icon2{
+    padding: 10px 14px;
+    background-color:#F0E4FA;
+    color:#9835FF;
+}
+.only-icon2:hover{
+    cursor: pointer;
+    background-color: #e1cdf1;
+}
+.round {
+    padding: 11px 14px;
+    background-color: #4261FF;
+    border-radius: 100%;
+}
+.round:hover{
+    cursor: pointer;
+}
+.round-outlined{
+    padding: 11px 14px;
+    background-color: #DFE4FF;
+    border-radius: 9999px;
+    color:#4261FF;
+
+}
+.round-outlined:hover{
+    cursor: pointer;
+    background-color: #cfd5fa;
+}
+
