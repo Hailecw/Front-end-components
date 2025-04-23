@@ -1,0 +1,38 @@
+
+.input-group{
+    position: relative;
+}
+.outlined{
+    padding: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size:1rem ;
+    outline: none;
+}
+.outlined:hover{
+    border:1px solid #000000;
+}
+
+.outlined:focus{
+    border:2px solid #90CAF9;
+}
+
+.outlined-label{
+    position: absolute;
+    color: #999;
+    font-size: 1rem;
+    background-color: #FFF;
+    top: 1.2rem;
+    left: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+
+}
+.outlined:focus + .outlined-label,
+.outlined:not(:placeholder-shown) + .outlined-label{
+    top: -0.5rem;
+    padding: 0 0.25rem;
+    font-size: 0.75rem;
+    color: #4a90e2;
+}
+

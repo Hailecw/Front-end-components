@@ -1,0 +1,29 @@
+.standard {
+    width: 222px;
+    height: 48px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #4a90e2;
+    font-size: 1rem;
+    padding-bottom: 0; /* Add this to push content to bottom */
+    padding-top: 20px; /* Add space at top for the label when it moves up */
+    box-sizing: border-box; /* Ensure padding is included in height */
+}
+
+.standard-label {
+    position: absolute;
+    top: 60%; /* Start at vertical center */
+    transform: translateY(-50%); /* Fine-tune vertical centering */
+    left: 0;
+    color: #999;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.standard:focus + .standard-label,
+.standard:not(:placeholder-shown) + .standard-label {
+    top: 8px;
+    color: #4a90e2;
+    font-size: 0.75rem;
+    transform: translateY(0); /* Remove transform when label moves up */
+}

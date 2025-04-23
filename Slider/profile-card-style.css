@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    margin: 0;
+    padding:50px;
+    display: flex;
+    gap:30px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #E8ECEF;
+}
+.profile-card{
+    height: 450px;
+    width: 350px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 7px;
+    position: relative;
+    background-color: #FFF;
+}
+.top-layer{
+    height: 150px;
+    width: 100%;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    background-color: #4071F4;
+    
+}
+.profile-img-layer{
+    width: 130px;
+    height: 130px;
+    border-radius: 9999px;
+    background-color: #4071F4;
+    position: absolute;
+    left: 50%;
+    top:15%;
+    transform: translate(-50%,-10%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-image{
+    width: 120px;
+    height: 120px;
+    border-radius: 9999px;
+    border: 3px solid #FFF;
+    object-fit: cover;
+  }
+.info{
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+}
+.name-and-job #name{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+}
+.name-and-job #job{
+    margin-top: -15px;
+    color: #9B9B9B;
+}
+.social-media-link{
+    display: flex;
+    gap: 10px;
+}
+.social-media-link div{
+    width:40px;
+    height: 40px;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+}
+.social-media-link div:hover{
+    cursor: pointer;
+}
+.facebook{
+    background-color: #3F65B1;
+}
+.twiter{
+    background-color: #129EF7;
+}
+.email{
+    background-color: #DF2E6B;
+}
+.youtube{
+    background-color: #F10000;
+}
+.btns{
+    display: flex;
+    gap: 20px;
+}
+.btns button{
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    font-size: 16px;
+    color: #FFF;
+    border-radius: 99px;
+    background-color: #4071F4;
+}
+.btns button:hover{
+    cursor: pointer;
+}
+.reactions div{
+   display: flex;
+    align-items: center;
+    gap: 2px;
+}
+.reactions{
+    display: flex;
+    gap: 20px;
+}

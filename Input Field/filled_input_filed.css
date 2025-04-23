@@ -1,0 +1,38 @@
+.filled{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    width: 250px;
+    height: 60px;
+    padding-left: 1rem;
+    padding-bottom: 0; /* Add this to push content to bottom */
+    padding-top: 20px; /* Add space at top for the label when it moves up */
+    box-sizing: border-box; /* Ensure padding is included in height */
+    border-bottom: 1px solid #ccc;
+    background-color: #E8E8E8;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    font-size: 1rem;
+}
+.filled:focus{
+    border-bottom: 2px solid #90CAF9;
+}
+.filled-label{
+    position: absolute;
+    top: 40%;
+    left: 12px;
+    color:#999;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.filled:focus + .filled-label,
+.filled:not(:placeholder-shown) + .filled-label{
+    top: 8px;
+    font-size: 0.75rem;
+    color: #4a90e2;
+}
+
+

@@ -1,0 +1,51 @@
+.error-label{
+    position: absolute;
+    color: #D32F2F;
+    left: 1rem;
+    background-color:#FFF;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    top: -0.5rem;
+    padding: 0 0.25rem;
+    font-size: 0.75rem;
+}
+
+.error:focus,
+.error,
+.error:hover
+{
+    border: 1px solid #D32F2F;
+}
+
+.success-label{
+    position: absolute;
+    left: 12px;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    top: 8px;
+    font-size: 0.75rem;
+    color: #66BB6A;
+
+}
+.success,
+.success:focus,
+.success:hover{
+    border-bottom:1px solid #66BB6A;
+}
+
+.warning-label{
+    position: absolute;
+    font-size: 0.75rem;
+    top: 8px;
+    left: 0;
+    transition: all 0.3s ease;
+    color: #FFA726;
+    transform: translateY(0); /* Remove transform when label moves up */
+}
+.warning{
+    border-bottom-color: #FFA726;
+}
+.warning:focus + .warning-label,
+.warning:not(:placeholder-shown) + .warning-label{
+    color: #FFA726;
+}

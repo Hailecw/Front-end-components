@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Floating Label Input Demo</title>
+    <link rel="stylesheet" href="basic-input-filed.css"/>
+    <link rel="stylesheet" href="filled_input_filed.css"/>
+    <link rel="stylesheet" href="standard_input.css"/>
+    <link rel="stylesheet" href="outlined_password.css"/>
+    <link rel="stylesheet" href="filled_amount.css"/>
+    <link rel="stylesheet" href="textarea_input.css"/>
+    <link rel="stylesheet" href="input_field_color.css"/>
+    <link rel="stylesheet" href="search-field.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #ADBBDA;
+            min-height: 100vh;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+        }
+        
+        .cont {
+            background: #FFF;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            width: 100%;
+            max-width: 800px;
+            display: block;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .cont {
+                padding: 20px;
+            }
+        }
+        .input-type{
+            display: flex;
+            gap: 50px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <h3 class="input-title">Input Type</h3>
+        <div class="input-type">
+            <div class="input-group">
+                <input type="text" class="outlined" id="name" placeholder="" required>
+                <label for="name" class="outlined-label">Outlined</label>
+            </div>
+            <div class="input-group">
+                <input type="text" class="filled" id="email" placeholder="" required>
+                <label for="email" class="filled-label">Filled</label>
+            </div>
+            <div class="input-group">
+                <input type="text" class="standard" id="standard" placeholder="" required>
+                <label for="standard" class="standard-label">Standard</label>
+            </div>
+        </div>
+        <h3 class="input-title">Input With Icon</h3>
+        <div class="input-type">
+            <div class="input-group">
+                <input type="password" class="outlined outlined_password" id="password" placeholder="" required>
+                <label for="password" class="outlined-label">Password</label>
+                <span class="material-icons visibility" onclick="show(this)">
+                    visibility
+                </span>
+            </div>
+            <div class="input-group">
+                <input type="number" class="filled amount" id="amount" placeholder="" required>
+                <label for="amount" class="amount-label">Amount</label>
+                <span class="material-icons euro-sign">
+                    euro
+                </span>
+            </div>
+        </div>
+        <h3 class="input-title">Input with status</h3>
+        <div class="input-type">
+            <div class="input-group">
+                <input type="text" class="outlined error" id="error" placeholder="" required>
+                <label for="error" class="error-label">Error</label>
+            </div>
+            <div class="input-group">
+                <input type="text" class="filled success" id="success" placeholder="" required>
+                <label for="success" class="success-label">Success</label>
+            </div>
+            <div class="input-group">
+                <input type="text" class="standard warning" id="warning" placeholder="" required>
+                <label for="warning" class="warning-label">Warning</label>
+            </div>
+        </div>
+        <h3 class="input-title">Multiline and Search</h3>
+        <div class="input-type">
+            <div class="input-group">
+                <textarea type="text" class="outlined message-filed" id="message" placeholder="Type here..." required></textarea>
+                <label for="message" class="message-label">Message</label>
+            </div>
+            
+            <div class="input-group">
+                <input type="text" class="search-field" id="search" placeholder="Type to search..." onfocus="Setclear(this)" onblur="Setclear(this)">
+                <span class="material-icons search-icon">
+                    search
+                </span>
+                <span class="material-icons end-icon" onclick="clearSearchField(this)">mic</span>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+    function show(element){
+        let input_filed = document.getElementById("password"); // Get the password input inside the function
+
+        // Toggle password visibility
+        if (input_filed.type === "password") {
+            input_filed.type = "text";
+            element.textContent = "visibility_off";  // Change icon to 'visibility_off'
+        } else {
+            input_filed.type = "password";
+            element.textContent = "visibility";  // Change icon to 'visibility'
+        }
+        
+    }
+    function Setclear(element){
+        let end_icon = document.getElementsByClassName("end-icon")[0];
+        end_icon.textContent = end_icon.textContent === "mic" ? "cancel":"mic"
+    }
+
+    </script>
+</body>
+</html>

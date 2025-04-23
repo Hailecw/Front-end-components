@@ -1,0 +1,23 @@
+.amount-label{
+    position: absolute;
+    top: 8px;
+    left: 0.5rem;
+    font-size: 0.75rem;
+    color: #999;
+}
+.amount{
+    padding-left: 2rem;
+    padding-right:1rem;
+}
+.euro-sign{
+    position: absolute;
+    top: 65%;
+    transform: translateY(-50%); /* Fine-tune vertical centering */
+    left: 0.5rem;
+    color: #999;
+    font-size: 16px !important;
+}
+.amount:focus + .amount-label,
+.amount:not(:placeholder-shown) + .amount-label{
+    color: #4a90e2;
+}

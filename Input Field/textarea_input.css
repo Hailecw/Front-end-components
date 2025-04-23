@@ -1,0 +1,19 @@
+.message-label{
+    position: absolute;
+    background-color: #FFF;
+    top: -0.5rem;
+    left: 1rem;
+    padding: 0 0.25rem;
+    font-size: 0.75rem;
+    color: #999;
+}
+.message-filed {
+    max-width: 450px;
+    width:350px;
+    max-height: 150px;
+    height: 110px;
+}
+.message-filed:focus + .message-label,
+.message-filed:not(:placeholder-shown) + .message-label{
+    color: #4a90e2;
+}
